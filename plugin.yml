@@ -6,3 +6,5 @@ version: 0.1
 commands:
     bungeewarp:
         description: teleport
+    bwarpgui:
+    	description: Warp GUI
