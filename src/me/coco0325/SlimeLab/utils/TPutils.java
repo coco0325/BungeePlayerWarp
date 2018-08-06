@@ -39,6 +39,6 @@ public class TPutils {
         	e.printStackTrace();
         }
 
-        p.sendPluginMessage(plugin, "BungeeCord", b.toByteArray());
+        p.sendPluginMessage(plugin, "ProxySuite", b.toByteArray());
 	}
 }
