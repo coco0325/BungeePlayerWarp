@@ -1,11 +1,13 @@
 package me.coco0325.SlimeLab;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
@@ -23,6 +25,19 @@ public class PlayerWarp extends JavaPlugin {
 	
 	public void onEnable() {
 		plugin = this;
+		config = this.getConfig();
+	    
+		PluginManager pm = Bukkit.getServer().getPluginManager();
+		
+		File configFile = new File(this.getDataFolder(), "config.yml");
+		if(!configFile.exists()) {
+			this.saveDefaultConfig();
+		}
+		host = config.getString("host");
+		port = config.getInt("port");
+		database = config.getString("database");
+		username = config.getString("user");
+		password = config.getString("password");
 		mysqlSetup();
 	}
 	public void onDisable() {
