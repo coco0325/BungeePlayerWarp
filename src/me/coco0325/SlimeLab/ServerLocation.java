@@ -3,6 +3,7 @@ package me.coco0325.SlimeLab;
 public class ServerLocation {
 	private String server, world;
 	private Integer x, y, z;
+	private double pitch, yaw;
 	
 	public ServerLocation(String server, String world, Integer x, Integer y, Integer z) {
 		this.server = server;
@@ -30,5 +31,13 @@ public class ServerLocation {
 
     public Integer getZ() {
         return z;
+    }
+    
+    public double getPitch() {
+    	return pitch;
+    }
+    
+    public double getYaw() {
+    	return yaw;
     }
 }

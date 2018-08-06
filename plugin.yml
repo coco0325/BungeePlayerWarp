@@ -1,0 +1,8 @@
+name: BungeePlayerWarp
+author: coco0325, SpeedReach
+prefix: BungeeWarp
+main: me.coco0325.SlimeLab.PlayerWarp
+version: 0.1
+commands:
+    bungeewarp:
+        description: teleport
